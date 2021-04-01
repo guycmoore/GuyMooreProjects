@@ -50,8 +50,8 @@ def sv_lhs (x, x0, roots, exps):
         
     y = 1.0
     for r,e in zip(roots, exps):
-        # y *= np.power((x - r)/(x0 - r), e)
-        y *= ((x - r)/(x0 - r)) ** e
+        y *= np.power((x - r)/(x0 - r), e)
+        # y *= ((x - r)/(x0 - r)) ** e
     return np.real(y)
 
 def bisection_sv (xm, x1, x2, 
